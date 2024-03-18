@@ -1,2 +1,7 @@
-bases:
-  - ../../k8s/
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../k8s/
+images:
+- digest: sha256:349052aae5b08acdca011e1ed03c3085b0588c91fba68eebfa97cc2ffac0f9bb
+  name: quay.io/bjlee72/pacman-kikd:latest
